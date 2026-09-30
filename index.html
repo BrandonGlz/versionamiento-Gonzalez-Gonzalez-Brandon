@@ -3,44 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Example Data Table with LocalStorage</title>
+    <title>Brandon González</title>
 
+    <link rel="icon" type="image/svg+xml" href="logo.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Example Product List Web App</h1>
-
-    <div class="container">
-
-        <div class="formContainer">
-            <label for="name">Product Name:</label>
-            <input type="text" id="name" placeholder="Enter product name">
-            
-            <label for="price">Price:</label>
-            <input type="number" id="price" placeholder="Enter product price" min="1">
-            
-            <button id="addProduct">Add Product</button>
+    <header class="header">
+        <div class="brand">
+            <img src="logo.svg" alt="Logo BG" class="brand-logo">
+            <div>
+                <span class="brand-name">Brandon González</span>
+                <span class="brand-tagline">Práctica: Control de versiones</span>
+            </div>
         </div>
+    </header>
 
-      
-        <table id="productsTable">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Price</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-          
-            </tbody>
-        </table>
-    </div>
+    <main class="container">
 
+        <section class="card formContainer">
+            <h2 class="card-title">New product</h2>
+
+            <label for="name">Product Name</label>
+            <input type="text" id="name" placeholder="Enter product name">
+
+            <label for="price">Price</label>
+            <input type="number" id="price" placeholder="Enter product price" min="1">
+
+            <button id="addProduct">Add Product</button>
+        </section>
+
+        <section class="content">
+            <div class="summary">
+                <div class="card summary-card">
+                    <span class="summary-label">Products</span>
+                    <span class="summary-value" id="totalProducts">0</span>
+                </div>
+                <div class="card summary-card summary-card--accent">
+                    <span class="summary-label">Total value</span>
+                    <span class="summary-value" id="totalValue">$0.00</span>
+                </div>
+            </div>
+
+            <div class="card table-card">
+                <h2 class="card-title">Products</h2>
+                <table id="productsTable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+                <p id="emptyMessage" class="empty-message">No products yet. Add your first one using the form.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        Práctica de <strong>Brandon González González</strong>
+    </footer>
 
     <script src="functions.js"></script>
 </body>

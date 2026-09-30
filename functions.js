@@ -22,6 +22,18 @@ function loadProductTable() {
     document.querySelectorAll('.delete-btn').forEach(button => {
         button.addEventListener('click', deleteProduct);
     });
+
+    //Show the empty message when there are no products
+    document.getElementById('emptyMessage').style.display = products.length === 0 ? 'block' : 'none';
+
+    updateSummary(products);
+}
+
+//Function to update the summary cards (total products and total value)
+function updateSummary(products) {
+    const totalValue = products.reduce((sum, product) => sum + product.price, 0);
+    document.getElementById('totalProducts').textContent = products.length;
+    document.getElementById('totalValue').textContent = `$${totalValue.toFixed(2)}`;
 }
 
 // Function to add a new product
