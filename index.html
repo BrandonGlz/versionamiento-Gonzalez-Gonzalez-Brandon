@@ -8,7 +8,7 @@
     <link rel="icon" type="image/svg+xml" href="logo.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Cinzel:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -24,6 +24,17 @@
 
     <main class="container">
 
+        <section class="summary">
+            <div class="summary-card">
+                <span class="summary-label">Products</span>
+                <span class="summary-value" id="totalProducts">0</span>
+            </div>
+            <div class="summary-card">
+                <span class="summary-label">Total value</span>
+                <span class="summary-value" id="totalValue">$0.00</span>
+            </div>
+        </section>
+
         <section class="card formContainer">
             <h2 class="card-title" id="formTitle">New product</h2>
 
@@ -38,17 +49,6 @@
         </section>
 
         <section class="content">
-            <div class="summary">
-                <div class="card summary-card">
-                    <span class="summary-label">Products</span>
-                    <span class="summary-value" id="totalProducts">0</span>
-                </div>
-                <div class="card summary-card summary-card--accent">
-                    <span class="summary-label">Total value</span>
-                    <span class="summary-value" id="totalValue">$0.00</span>
-                </div>
-            </div>
-
             <div class="card table-card">
                 <h2 class="card-title">Products</h2>
                 <table id="productsTable">
